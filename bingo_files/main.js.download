@@ -1,0 +1,75 @@
+ // Define the list of songs with artist names
+    const songs = [
+      "Auld Lang Syne - Traditional",
+      "Happy New Year - ABBA",
+      "New Year's Day - U2",
+      "What Are You Doing New Year's Eve? - Ella Fitzgerald",
+      "It's Just Another New Year's Eve - Barry Manilow",
+      "New Year's Eve - Snoop Dogg ft. Marty James",
+      "New Year's Day - Taylor Swift",
+      "Bringing in a Brand New Year - B.B. King",
+      "New Year's Resolution - Otis Redding & Carla Thomas",
+      "This Will Be (An Everlasting Love) - Natalie Cole",
+      "New Year's Kiss - Gwen Stefani",
+      "Year's End - The Black Eyed Peas",
+      "Ring in the New - Imogen Heap",
+      "Another Year Has Gone By - Celine Dion",
+      "New Year's Eve 1999 - Alabama",
+      "My eyes & your eyes - Buck-Tick",
+      "She's Kerosene - The Interrupters",
+      "Do kosti -Tabu",
+      "Box - ZalaGašper",
+      "TRY 1",
+      "TRY 2",
+      "TRY 3",
+      "TRY 4",
+      "TRY 5",
+      "TRY 6",
+      "Fairytale of New York - The Pogues",
+      "New Year's Eve - Tom Waits"
+    ];
+
+    let shuffledSongs = [];
+
+    // Function to randomize songs and update the Bingo card
+    function randomizeSongs() {
+      const bingoCard = document.getElementById("bingo-card");
+      bingoCard.innerHTML = "";
+      shuffledSongs = shuffleArray(songs);
+
+      // Create Bingo card cells and add them to the card
+for (let i = 0; i < 25; i++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.textContent = shuffledSongs[i];
+
+        // Add a click event listener to mark the cell
+        cell.addEventListener("click", function() {
+          this.classList.toggle("selected");
+          checkBingo();
+        });
+
+        bingoCard.appendChild(cell);
+      }
+    }
+
+
+    // Function to reset the game
+    function resetGame() {
+      const selectedCells = document.querySelectorAll(".selected");
+      selectedCells.forEach(cell => cell.classList.remove("selected"));
+    }
+
+    // Function to shuffle an array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Initial randomization on page load
+    randomizeSongs();
+
+    // Function to submit bingo

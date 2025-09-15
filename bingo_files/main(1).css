@@ -1,0 +1,135 @@
+body {
+      background: radial-gradient(circle at left top, #5C44A6 -50%, #322D3D);
+    font-family: "Quicksand", sans-serif;
+      color: #000;
+      min-height: 100vh;
+	overflow-x: hidden;
+    }
+
+/* .sphere {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 40% 30%,#7000ff00 4%,57%,#000 90%) 
+    #FE4365;
+} */
+
+.spheres {
+  min-height: 100vh;
+  position: absolute;
+      z-index: -1;
+}
+
+.sphere2 {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #ffffff50;
+  background: 
+    radial-gradient(circle at center,transparent 5%, #ffffff10 60%, #ffffff50 80%, #fff 100%) 
+    #ffffff00;
+  margin: -50px; 
+}
+
+.sphere1 {
+  width: 400px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #ffffff50;
+  background: 
+    radial-gradient(circle at center,transparent 5%, #ffffff10 59%, #ffffff45 85%, #fff 100%) 
+    #ffffff00;
+  margin: -50px; 
+}
+
+.sphere4 {
+  width: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #ffffff50;
+  background: 
+    radial-gradient(circle at center,transparent 5%, #ffffff10 59%, #ffffff45 85%, #fff 100%) 
+    #ffffff00;
+  margin: -20vh 80vw;
+}
+
+.square {
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  position: sticky;
+  max-width: 100vh;
+  aspect-ratio: 1;
+  border-radius: 5%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+
+#bingo-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      max-width: 90%;
+      margin: 5px auto;
+      z-index: 1;
+    }
+    
+ .cell {
+      position: relative;
+      text-align: center;
+      font-size: 0.85em;
+      cursor: pointer;
+      border-radius: 25% 5%;
+      border: 1px solid #322D3D50;
+      background: #ffffff00;
+      height: 0;
+      padding: 10px 10px 80% 10px;
+      width: 80%;
+	margin: auto;
+    }
+    
+.selected {
+      background-color: #A595C750;
+    }
+
+h1 {
+  font-weight: SemiBold;
+}
+    
+button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #322D3D;
+      color: #fff;
+	border: none;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+button:hover {
+      background-color: #5C44A6;
+    }
+
+    @media screen and (max-width: 480px) {
+      button {
+        width: 100%;
+        /* Make the button full width on smaller screens */
+      }
+
+    #bingo-card {
+      gap: 5px;
+      max-width: 100%;
+      margin: 10px auto;
+    }
+
+    .cell {
+      font-size: 0.6em;
+      padding: 5px 5px 80% 5px;
+      width: 80%;
+    }
+    }
