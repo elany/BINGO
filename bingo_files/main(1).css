@@ -6,15 +6,6 @@ body {
 	overflow-x: hidden;
     }
 
-/* .sphere {
-  width: 200px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: 
-    radial-gradient(circle at 40% 30%,#7000ff00 4%,57%,#000 90%) 
-    #FE4365;
-} */
-
 .spheres {
   min-height: 100vh;
   position: absolute;
