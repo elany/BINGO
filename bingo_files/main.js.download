@@ -1,4 +1,12 @@
     const songs = [
+      "<a href='https://www.youtube.com/watch?v=Yq2jJLswL8I'>She's Kerosene - The Interrupters</a>",
+      "<a href='https://www.youtube.com/watch?v=W4jHoEPqSQc'>Up In Flames - Years & Years</a>",
+      "<a href='https://www.youtube.com/watch?v=46v1uozwsr0'>USER 139 - CHAR</a>",
+      "<a href='https://www.youtube.com/watch?v=0Q3NSVWLXS4'>Icarus - Grant Knoche</a>",
+      "<a href='https://www.youtube.com/watch?v=M9RDzoz0ACc'>Dragged Me Back to Hell - Empara Mi</a>",
+      "<a href='https://www.youtube.com/watch?v=RV69v2DI_LA'>2 Body Problem - Xenia</a>",
+      "<a href='https://www.youtube.com/watch?v=k9tgLnI0fFc'>Not The Future - Bad Lip Reading</a>",
+      "<a href='https://www.youtube.com/watch?v=bn8gP5N8hqM'>Cry For Me - The Weeknd</a>",
       "TRY 1",
       "TRY 2",
       "TRY 3",
@@ -30,7 +38,7 @@
 for (let i = 0; i < 25; i++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.textContent = shuffledSongs[i];
+        cell.innerHTML = shuffledSongs[i];
 
         cell.addEventListener("click", function() {
           this.classList.toggle("selected");
