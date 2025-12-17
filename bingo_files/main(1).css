@@ -89,6 +89,24 @@ body {
 h1 {
   font-weight: SemiBold;
 }
+
+p {
+  font-weight: 200;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: underline rgba(80, 67, 119, 0.29);
+  text-underline-offset: 0.15em;
+  color: #504377;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  color: #8772c5;
+}
     
 button {
       display: block;
@@ -125,7 +143,7 @@ body {
     }
 
     .cell {
-      font-size: 0.4em;
+      font-size: 0.5em;
       padding: 5px 5px 80% 5px;
       width: 80%;
     }
